@@ -1,4 +1,7 @@
-
+/**
+ *
+ * @author Victor Williams/todoslosdays
+ */
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -42,7 +45,7 @@ public class PassGenerator {
 			if (maxLength > 6) {// minimum length
 				System.out.print("Press 1 to include Symbols: ");
 				symbols = scan.nextInt();
-				
+
 				if (symbols == 1) {// checking for symbols
 					allChars += SYMBOL;
 					System.out.print("Press 1 to include Numbers: ");
@@ -52,12 +55,12 @@ public class PassGenerator {
 						allChars += NUMBER;
 						System.out.print("Press 1 to include Lower Case Characters: ");
 						loCaseChars = scan.nextInt();
-					
+
 						if (loCaseChars == 1) {// checking for lower case characters
 							allChars += LOWERCASE;
 							System.out.print("Press 1 to include Upper Case Characters: ");
 							upCaseChars = scan.nextInt();
-						
+
 							if (upCaseChars == 1) {// checking for upper case characters
 								allChars += UPPERCASE;
 								regexB = Regex_start + Regex_digits + Regex_symbols + Regex_lowercases
